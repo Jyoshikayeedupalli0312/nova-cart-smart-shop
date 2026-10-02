@@ -69,9 +69,9 @@ export const STORES: Store[] = [
   ["Nandini Milk Parlour", "Dairy"], ["Gokul Dairy Hub", "Dairy"],
 ].map(([name, category], i) => ({
   id: `S${i + 1}`,
-  name,
+  name: name!,
   category: category as Category,
-  city: ["Bengaluru", "Pune", "Hyderabad"][i % 3],
+  city: ["Bengaluru", "Pune", "Hyderabad"][i % 3]!,
   distanceKm: +(0.6 + rnd() * 4.2).toFixed(1),
   acceptRate: +(0.72 + rnd() * 0.27).toFixed(2),
   onTimeRate: +(0.68 + rnd() * 0.3).toFixed(2),
