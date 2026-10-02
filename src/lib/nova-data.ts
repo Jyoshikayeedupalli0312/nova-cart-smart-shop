@@ -23,7 +23,7 @@ export interface Product {
   stock: number;
   dailyDemand: number;
   unavailableSearches: number; // searches last 7d while out of stock
-  promo?: number; // % off
+  promo?: number | undefined; // % off
 }
 
 export interface Customer {
