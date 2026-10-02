@@ -96,7 +96,7 @@ export function projectImpact(i: ImpactInputs) {
   const repeat = 27 + 6 * floorEffect * 0.6 + 4 * route * 0.6 + 6 * promo * 0.7 + 2 * inv;
   const promoSpend = 17 - 17 * promo * 0.44 * 0.8; // 44% coupons unredeemed
   const tickets = 5900 * (1 - (11 - cancel) / 11 * 0.6);
-  const orders = 38500 * (1 + (repeat - 27) / 100 * 1.4) * (1 - (cancel - 11) / -100 * -1);
+  const orders = 38500 * (1 + (repeat - 27) / 100 * 1.4) * (1 + (11 - cancel) / 100);
   const revenue = (orders * 486) / 100000;
 
   return {
